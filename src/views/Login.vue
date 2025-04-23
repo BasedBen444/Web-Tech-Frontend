@@ -17,7 +17,7 @@
 
 <script setup>
 import { ref } from 'vue'
-import { getUserRole, login } from '@/apis/auth.js'
+import { getUserRole, isAuthenticated, login } from '@/apis/auth.js'
 import { useRouter, useRoute } from 'vue-router'
 import { userRoute } from '@/router/dynamicRoutes'
 import { useNavStore } from '@/stores/NavStore.js'

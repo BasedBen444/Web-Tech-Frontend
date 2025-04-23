@@ -1,148 +1,154 @@
 {
-    "users": [
-        {
-          "id": 1,
-          "username": "john",
-          "enabled": true,
-          "position": "staff",
-          "job": "administrator",
-          "roles": "admin user"
-        },
-        {
-          "id": 2,
-          "username": "eric",
-          "enabled": true,
-          "position": "student",
-          "job": "utility",
-          "roles": "user"
-        },
-        {
-          "id": 3,
-          "username": "tom",
-          "enabled": false,
-          "position": "freelancer",
-          "job": "cameras",
-          "roles": "user"
-        },
-        {
-          "id": 4,
-          "username": "lisa",
-          "enabled": true,
-          "position": "staff",
-          "job": "producer",
-          "roles": "admin"
-        },
-        {
-          "id": 5,
-          "username": "sara",
-          "enabled": true,
-          "position": "staff",
-          "job": "assistant producer",
-          "roles": "user"
-        },
-        {
-          "id": 6,
-          "username": "dave",
-          "enabled": true,
-          "position": "staff",
-          "job": "toc",
-          "roles": "user"
-        },
-        {
-          "id": 7,
-          "username": "nina",
-          "enabled": true,
-          "position": "broadcaster",
-          "job": "assistant director",
-          "roles": "user"
-        },
-        {
-          "id": 8,
-          "username": "brian",
-          "enabled": true,
-          "position": "freelancer",
-          "job": "director",
-          "roles": "user"
-        },
-        {
-          "id": 9,
-          "username": "maria",
-          "enabled": true,
-          "position": "student",
-          "job": "replay",
-          "roles": "user"
-        },
-        {
-          "id": 10,
-          "username": "kevin",
-          "enabled": true,
-          "position": "freelancer",
-          "job": "video operator",
-          "roles": "user"
-        },
-        {
-          "id": 11,
-          "username": "olivia",
-          "enabled": true,
-          "position": "student",
-          "job": "technical director",
-          "roles": "user"
-        },
-        {
-          "id": 12,
-          "username": "mark",
-          "enabled": true,
-          "position": "staff",
-          "job": "score bug operator",
-          "roles": "user"
-        },
-        {
-          "id": 13,
-          "username": "zoe",
-          "enabled": true,
-          "position": "broadcaster",
-          "job": "graphics",
-          "roles": "user"
-        },
-        {
-          "id": 14,
-          "username": "anna",
-          "enabled": true,
-          "position": "freelancer",
-          "job": "audio 1",
-          "roles": "user"
-        },
-        {
-          "id": 15,
-          "username": "leo",
-          "enabled": true,
-          "position": "freelancer",
-          "job": "audio 2",
-          "roles": "user"
-        },
-        {
-          "id": 16,
-          "username": "jack",
-          "enabled": true,
-          "position": "broadcaster",
-          "job": "stage manager",
-          "roles": "user"
-        },
-        {
-          "id": 17,
-          "username": "ruby",
-          "enabled": true,
-          "position": "student",
-          "job": "stats",
-          "roles": "user"
-        },
-        {
-          "id": 18,
-          "username": "mike",
-          "enabled": true,
-          "position": "broadcaster",
-          "job": "talent",
-          "roles": "user"
-        }
-      ]
+  "users": [
+    {
+      "id": "1",
+      "username": "john",
+      "enabled": true,
+      "position": "staff",
+      "job": "administrator",
+      "roles": "admin user"
+    },
+    {
+      "id": "2",
+      "username": "eric",
+      "enabled": true,
+      "position": "student",
+      "job": "utility",
+      "roles": "user"
+    },
+    {
+      "id": "3",
+      "username": "tom",
+      "enabled": false,
+      "position": "freelancer",
+      "job": "cameras",
+      "roles": "user"
+    },
+    {
+      "id": "4",
+      "username": "lisa",
+      "enabled": true,
+      "position": "staff",
+      "job": "producer",
+      "roles": "admin"
+    },
+    {
+      "id": "5",
+      "username": "sara",
+      "enabled": true,
+      "position": "staff",
+      "job": "assistant producer",
+      "roles": "user"
+    },
+    {
+      "id": "6",
+      "username": "dave",
+      "enabled": true,
+      "position": "staff",
+      "job": "toc",
+      "roles": "user"
+    },
+    {
+      "id": "7",
+      "username": "nina",
+      "enabled": true,
+      "position": "broadcaster",
+      "job": "assistant director",
+      "roles": "user"
+    },
+    {
+      "id": "8",
+      "username": "brian",
+      "enabled": true,
+      "position": "freelancer",
+      "job": "director",
+      "roles": "user"
+    },
+    {
+      "id": "9",
+      "username": "maria",
+      "enabled": true,
+      "position": "student",
+      "job": "replay",
+      "roles": "user"
+    },
+    {
+      "id": "10",
+      "username": "kevin",
+      "enabled": true,
+      "position": "freelancer",
+      "job": "video operator",
+      "roles": "user"
+    },
+    {
+      "id": "11",
+      "username": "olivia",
+      "enabled": true,
+      "position": "student",
+      "job": "technical director",
+      "roles": "user"
+    },
+    {
+      "id": "12",
+      "username": "mark",
+      "enabled": true,
+      "position": "staff",
+      "job": "score bug operator",
+      "roles": "user"
+    },
+    {
+      "id": "13",
+      "username": "zoe",
+      "enabled": true,
+      "position": "broadcaster",
+      "job": "graphics",
+      "roles": "user"
+    },
+    {
+      "id": "14",
+      "username": "anna",
+      "enabled": true,
+      "position": "freelancer",
+      "job": "audio 1",
+      "roles": "user"
+    },
+    {
+      "id": "15",
+      "username": "leo",
+      "enabled": true,
+      "position": "freelancer",
+      "job": "audio 2",
+      "roles": "user"
+    },
+    {
+      "id": "16",
+      "username": "jack",
+      "enabled": true,
+      "position": "broadcaster",
+      "job": "stage manager",
+      "roles": "user"
+    },
+    {
+      "id": "17",
+      "username": "ruby",
+      "enabled": true,
+      "position": "student",
+      "job": "stats",
+      "roles": "user"
+    },
+    {
+      "id": "18",
+      "username": "mike",
+      "enabled": true,
+      "position": "broadcaster",
+      "job": "talent",
+      "roles": "user"
+    },
+    {
+      "id": "d0c1",
+      "username": "ben",
+      "position": "student",
+      "job": "Graphics"
+    }
+  ]
 }
