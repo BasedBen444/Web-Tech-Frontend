@@ -9,22 +9,28 @@
         <button @click="handleLogin" v-else>
             Log In
         </button>
+        <button @click="handleSignup" v-if="!isAuthenticated">
+            Sign Up
+        </button>
     </div>
 </template>
 
 <script setup>
 import { isAuthenticated, logout } from '@/apis/auth'
-import { useRouter } from 'vue-router'
+import { onBeforeRouteUpdate, useRouter } from 'vue-router'
 import { useNavStore } from '@/stores/NavStore'
+import { onMounted } from 'vue'
+import { signupRoute } from '@/router/dynamicRoutes'
 
 const router = useRouter()
 const { updateNavRoutes } = useNavStore()
 
 const handleLogout = () => {
-    // if (router.hasRoute('vipExclusive')) {
-    //     router.removeRoute('vipExclusive')
-    //     updateNavRoutes()
-    // }
+    if (router.hasRoute('users')) {
+        router.removeRoute('users')
+        updateNavRoutes()
+    }
+    
     logout()
 }
 
@@ -33,6 +39,10 @@ const handleLogin = () => {
     router.replace(redirectPath)
 }
 
+const handleSignup = () => {
+    const redirectPath = { name: 'signup' }
+    router.replace(redirectPath)
+}
 </script>
 
 <style lang="scss" scoped>

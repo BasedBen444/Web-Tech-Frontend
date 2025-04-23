@@ -17,3 +17,10 @@ export const userRoute = {
         }
     ]
 }
+
+export const signupRoute = { 
+    path: '/signup', 
+    name:'signup', 
+    component: () => import('@/views/Signup.vue'), 
+    meta: {requiresAuth: false, title:'Sign Up', isNavLink: true}
+}
