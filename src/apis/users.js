@@ -45,4 +45,19 @@ const createUser = async (user) => {
     }
 }
 
-export default {findAll, findById, createUser}
+const deleteUser = async (id) => {
+    try {
+      const response = await fetch(`${BASE_URL}/${id}`, {
+        method: 'DELETE'
+      })
+      if (!response.ok) {
+        throw new Error(`Error deleting user: ${response.statusText}`)
+      }
+      return true
+    } catch (error) {
+      console.error(error)
+      throw error
+    }
+  }
+
+export default {findAll, findById, createUser, deleteUser}

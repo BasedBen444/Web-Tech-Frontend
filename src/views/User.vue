@@ -8,6 +8,9 @@
                 <p>Qualified Position: {{ user.job }}</p>
                 <p>Phone: {{ user.phonenumber }}</p>
                 <p>Email: {{ user.email }}</p>
+                <div v-if="isAdminUser" class="button-group">
+                    <button @click="confirmDelete">Delete Crew Member</button>
+                </div>
              </div>
          </div>
          <div v-else>Failed to load user profile. Please try again later</div>
@@ -15,14 +18,16 @@
  </template>
  
  <script setup>
- import { ref, watch } from 'vue'
- import { useRoute } from 'vue-router'
+ import { ref, watch, computed } from 'vue'
+ import { useRoute, useRouter } from 'vue-router'
  import api from '@/apis/users'
+ import { isAdmin } from '@/apis/auth'
  
  const user = ref(null)
  const loading = ref(true)
- 
  const route = useRoute()
+ const router = useRouter()
+ const isAdminUser = computed(() => isAdmin.value)
  
  async function loadUserProfile(id) {
      try {
@@ -34,6 +39,20 @@
          loading.value = false
      }
  }
+
+async function confirmDelete() {
+    const confirmed = window.confirm(`⚠️ Are you sure you want to delete ${user.value.firstname} ${user.value.lastname}? This cannot be undone.`)
+
+    if (confirmed) {
+        try {
+            await api.deleteUser(route.params.id)
+            alert('✅ User deleted successfully.')
+            router.push({ name: 'users' }) // send back to user list
+        } catch (err) {
+            alert('❌ Failed to delete user.')
+        }
+    }
+}
  
  watch(() => route.params.id, (newId, oldId) => {
      loadUserProfile(newId)
@@ -67,7 +86,24 @@
  
          p {
              margin-bottom: 1rem;
-         }
-     }
+        }
+         .button-group {
+            margin-top: 1.5rem;
+        }   
+        button {
+        background-color: #dc3545;
+        color: white;
+        border: none;
+        padding: 0.75rem 1.5rem;
+        font-size: 1rem;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+        background-color: #c82333;
+        }
+    }
  }
  </style>

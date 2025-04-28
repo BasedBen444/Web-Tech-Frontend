@@ -34,8 +34,7 @@
   const loading = ref(true)
   const error = ref(null)
   const isAdminUser = computed(() => isAdmin.value)
-  const role = computed(() => userRole.value)
-  
+    
   // Filters
   const filters = ref({
     name: '',
