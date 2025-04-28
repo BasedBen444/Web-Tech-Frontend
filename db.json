@@ -9,7 +9,10 @@
       "enabled": true,
       "position": "staff",
       "job": "administrator",
-      "roles": ["admin", "user"]
+      "roles": [
+        "admin",
+        "user"
+      ]
     },
     {
       "id": "2",
@@ -20,7 +23,9 @@
       "enabled": true,
       "position": "student",
       "job": "utility",
-      "roles": ["user"]
+      "roles": [
+        "user"
+      ]
     },
     {
       "id": "3",
@@ -31,7 +36,9 @@
       "enabled": false,
       "position": "freelancer",
       "job": "cameras",
-      "roles": ["user"]
+      "roles": [
+        "user"
+      ]
     },
     {
       "id": "4",
@@ -42,7 +49,9 @@
       "enabled": true,
       "position": "staff",
       "job": "producer",
-      "roles": ["admin"]
+      "roles": [
+        "admin"
+      ]
     },
     {
       "id": "5",
@@ -53,7 +62,9 @@
       "enabled": true,
       "position": "staff",
       "job": "assistant producer",
-      "roles": ["user"]
+      "roles": [
+        "user"
+      ]
     },
     {
       "id": "6",
@@ -64,7 +75,9 @@
       "enabled": true,
       "position": "staff",
       "job": "toc",
-      "roles": ["user"]
+      "roles": [
+        "user"
+      ]
     },
     {
       "id": "7",
@@ -75,7 +88,9 @@
       "enabled": true,
       "position": "broadcaster",
       "job": "assistant director",
-      "roles": ["user"]
+      "roles": [
+        "user"
+      ]
     },
     {
       "id": "8",
@@ -86,7 +101,9 @@
       "enabled": true,
       "position": "freelancer",
       "job": "director",
-      "roles": ["user"]
+      "roles": [
+        "user"
+      ]
     },
     {
       "id": "9",
@@ -97,7 +114,9 @@
       "enabled": true,
       "position": "student",
       "job": "replay",
-      "roles": ["user"]
+      "roles": [
+        "user"
+      ]
     },
     {
       "id": "10",
@@ -108,7 +127,9 @@
       "enabled": true,
       "position": "freelancer",
       "job": "video operator",
-      "roles": ["user"]
+      "roles": [
+        "user"
+      ]
     },
     {
       "id": "11",
@@ -119,7 +140,9 @@
       "enabled": true,
       "position": "student",
       "job": "technical director",
-      "roles": ["user"]
+      "roles": [
+        "user"
+      ]
     },
     {
       "id": "12",
@@ -130,7 +153,9 @@
       "enabled": true,
       "position": "staff",
       "job": "score bug operator",
-      "roles": ["user"]
+      "roles": [
+        "user"
+      ]
     },
     {
       "id": "13",
@@ -141,7 +166,9 @@
       "enabled": true,
       "position": "broadcaster",
       "job": "graphics",
-      "roles": ["user"]
+      "roles": [
+        "user"
+      ]
     },
     {
       "id": "14",
@@ -152,7 +179,9 @@
       "enabled": true,
       "position": "freelancer",
       "job": "audio 1",
-      "roles": ["user"]
+      "roles": [
+        "user"
+      ]
     },
     {
       "id": "15",
@@ -163,7 +192,9 @@
       "enabled": true,
       "position": "freelancer",
       "job": "audio 2",
-      "roles": ["user"]
+      "roles": [
+        "user"
+      ]
     },
     {
       "id": "16",
@@ -174,7 +205,9 @@
       "enabled": true,
       "position": "broadcaster",
       "job": "stage manager",
-      "roles": ["user"]
+      "roles": [
+        "user"
+      ]
     },
     {
       "id": "17",
@@ -185,7 +218,9 @@
       "enabled": true,
       "position": "student",
       "job": "stats",
-      "roles": ["user"]
+      "roles": [
+        "user"
+      ]
     },
     {
       "id": "18",
@@ -196,7 +231,9 @@
       "enabled": true,
       "position": "broadcaster",
       "job": "talent",
-      "roles": ["user"]
+      "roles": [
+        "user"
+      ]
     }
   ]
 }
