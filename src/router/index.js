@@ -1,6 +1,4 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import { signupRoute } from './dynamicRoutes'
-import { isAuthenticated } from '@/apis/auth.js'
 
 const router = createRouter({
     history: createWebHistory(),
@@ -11,12 +9,8 @@ const router = createRouter({
         ] 
     },
         { path: '/login', name: 'login', component: () => import('@/views/Login.vue'), meta: {requiresAuth: false} },
-        { 
-            path: '/signup', 
-            name:'signup', 
-            component: () => import('@/views/Signup.vue'), 
-            meta: {requiresAuth: false, requiresGuest: true, title:'Sign Up', isNavLink: true}
-        }, 
+        { path: '/signup', name: 'signup', component: () => import('@/views/Signup.vue'), meta: {requiresAuth: false} },
+        { path: '/signup/confirm', name: 'signup-confirm', component: () => import('@/views/SignupConfirm.vue'), meta: {requiresAuth: false} },
         { path: '/:pathMatch(.*)*', name: 'not-found', component: () => import('@/views/NotFound.vue'), meta: {requiresAuth: false} },
     ],
 })

@@ -26,4 +26,23 @@ const findById = async (id) => {
     }
 }
 
-export default {findAll, findById}
+const createUser = async (user) => {
+    try {
+        const response = await fetch(BASE_URL, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(user)
+        })
+        if (!response.ok) {
+            throw new Error(`Error creating user: ${response.statusText}`)
+        }
+        return await response.json()
+    } catch (error) {
+        console.error(error)
+        throw error
+    }
+}
+
+export default {findAll, findById, createUser}
