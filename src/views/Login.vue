@@ -19,7 +19,7 @@
 import { ref } from 'vue'
 import { getUserRole, isAuthenticated, login } from '@/apis/auth.js'
 import { useRouter, useRoute } from 'vue-router'
-import { userRoute } from '@/router/dynamicRoutes'
+import { createScheduleRoute, userRoute, viewScheduleRoute } from '@/router/dynamicRoutes'
 import { useNavStore } from '@/stores/NavStore.js'
 
 const username = ref('')
@@ -38,6 +38,12 @@ async function handleLogin () {
 
         if ((userRole === 'admin' || userRole === 'user') && !router.hasRoute('users')) {
             router.addRoute('mainLayout', userRoute)
+            router.addRoute('mainLayout', viewScheduleRoute)
+            updateNavRoutes()
+        }
+
+        if (userRole === 'admin' && !router.hasRoute('createSchedule')) {
+            router.addRoute('mainLayout', createScheduleRoute)
             updateNavRoutes()
         }
 
@@ -100,7 +106,7 @@ async function handleLogin () {
             padding: 0.75rem;
             border: none;
             border-radius: 6px;
-            background-color: #007bff;
+            background-color: purple;
             color: #fff;
             font-size: 1rem;
             font-weight: bold;
@@ -108,7 +114,7 @@ async function handleLogin () {
             transition: all 0.3s ease;
 
             &:hover {
-                background-color: #0056b3;
+                background-color: darkviolet;
                 box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
                 transform: translateY(-3px);
             }

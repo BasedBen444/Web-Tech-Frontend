@@ -1,33 +1,31 @@
 <template>
-    <div class="user-profiles-greeting">
-        <h1>Welcome to the user profiles page!</h1>
+    <div class="schedules-greeting">
+        <h1>Welcome to the schedules page!</h1>
         <h2>
-            Here you can find all the user profiles and their relevant information.
+            Here you can find all the schedules and their relevant information.
         </h2>
     </div>
 </template>
 
 <script setup>
 import { ref, onMounted } from 'vue'
-import { useRouter } from 'vue-router'
-import api from '@/apis/users'
+import api from '@/apis/scheduling'
 
 const userProfiles = ref([])
-const router = useRouter()
 
-onMounted(loadUserProfiles)
+onMounted(loadSchedules)
 
-async function loadUserProfiles() {
+async function loadSchedules() {
     try {
-        userProfiles.value  = await api.findAll()
+        userProfiles.value  = await api.findAllSchedules()
     } catch (error) {
-        console.error('Error loading user profiles:', error)
+        console.error('Error loading schedules:', error)
     }
 }
 </script>
 
 <style lang="scss" scoped>
-.user-profiles-greeting {
+.schedules-greeting {
     padding: 1.5rem;
     background-color: #f5f5f5;
     border-radius: 8px;
