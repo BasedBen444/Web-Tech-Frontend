@@ -235,5 +235,49 @@
         "user"
       ]
     }
+  ],
+  "schedules": [
+    {
+      "id": 1,
+      "date": "2024-03-09",
+      "startTime": "4:00 PM",
+      "endTime": "6:00 PM",
+      "timezone": "CST",
+      "sport": "Basketball",
+      "teams": "Cincinnati vs TCU",
+      "network": "ESPN+",
+      "location": "Fort Worth, TX",
+      "notes": "Feed Game Melts after. Cameras prioritize Booth & On Heads.",
+      "requiredCrewPositions": [
+        "Producer",
+        "Director",
+        "Technical Director",
+        "Graphics",
+        "Replay",
+        "Cameras",
+        "Audio 1",
+        "Audio 2",
+        "Stats",
+        "Stage Manager",
+        "Talent"
+      ]
+    },
+    {
+      "id": "a95b",
+      "date": "2025-05-02",
+      "startTime": "16:00",
+      "endTime": "18:00",
+      "timezone": "CST",
+      "sport": "Basketball",
+      "teams": "TCU vs Baylor",
+      "network": "ESPN+",
+      "location": "Fort Worth, Tx",
+      "notes": "Example",
+      "requiredCrewPositions": [
+        "Producer",
+        "Cameras",
+        "Stats"
+      ]
+    }
   ]
 }

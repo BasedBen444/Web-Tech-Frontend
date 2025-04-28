@@ -29,6 +29,16 @@ const handleLogout = () => {
         router.removeRoute('users')
         updateNavRoutes()
     }
+
+    if(router.hasRoute('schedules')) {
+        router.removeRoute('schedules')
+        updateNavRoutes()
+    }
+
+    if(router.hasRoute('createSchedule')) {
+        router.removeRoute('createSchedule')
+        updateNavRoutes()
+    }
     
     logout()
 }
