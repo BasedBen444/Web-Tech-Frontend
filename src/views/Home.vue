@@ -9,9 +9,6 @@
         <button @click="handleLogin" v-else>
             Log In
         </button>
-        <button @click="handleSignup" v-if="!isAuthenticated">
-            Sign Up
-        </button>
     </div>
 </template>
 
@@ -39,6 +36,11 @@ const handleLogout = () => {
         router.removeRoute('createSchedule')
         updateNavRoutes()
     }
+
+    if(router.hasRoute('invite')) {
+        router.removeRoute('invite')
+        updateNavRoutes()
+    }
     
     logout()
 }
@@ -48,10 +50,6 @@ const handleLogin = () => {
     router.replace(redirectPath)
 }
 
-const handleSignup = () => {
-    const redirectPath = { name: 'signup' }
-    router.replace(redirectPath)
-}
 </script>
 
 <style lang="scss" scoped>

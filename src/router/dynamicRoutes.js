@@ -49,3 +49,16 @@ export const viewScheduleRoute = {
         }
     ]
 }
+
+export const inviteRoute = {
+    path: '/invite',
+    name: 'invite',
+    isNavLink: true,
+    component: () => import('@/views/Invite.vue'),
+    meta:{
+        requiresAuth: true,
+        title: 'Invite Crew',
+        isNavLink: true,
+        roles: ['admin'],
+    },
+}

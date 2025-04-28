@@ -42,6 +42,11 @@
         </select>
       </label>
 
+      <label>
+        Password:
+        <input v-model="form.password" type="password" required />
+      </label>
+
       <button type="submit">Continue</button>
     </form>
 

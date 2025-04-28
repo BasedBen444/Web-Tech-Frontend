@@ -9,7 +9,8 @@ export const useSignupStore = defineStore('signup', () => {
     phonenumber: '',
     email: '',
     position: '',
-    job: ''
+    job: '',
+    password: ''
   })
 
   function setForm(newForm) {
@@ -23,7 +24,8 @@ export const useSignupStore = defineStore('signup', () => {
       phonenumber: '',
       email: '',
       position: '',
-      job: ''
+      job: '',
+      password: ''
     }
   }
 

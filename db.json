@@ -6,13 +6,13 @@
       "lastname": "Doe",
       "phonenumber": "555-0101",
       "email": "john@example.com",
-      "enabled": true,
       "position": "staff",
       "job": "administrator",
       "roles": [
         "admin",
         "user"
-      ]
+      ],
+      "password": "samplePassword123"
     },
     {
       "id": "2",
@@ -20,12 +20,12 @@
       "lastname": "Smith",
       "phonenumber": "555-0102",
       "email": "eric@example.com",
-      "enabled": true,
       "position": "student",
       "job": "utility",
       "roles": [
         "user"
-      ]
+      ],
+      "password": "samplePassword123"
     },
     {
       "id": "3",
@@ -33,12 +33,12 @@
       "lastname": "Brown",
       "phonenumber": "555-0103",
       "email": "tom@example.com",
-      "enabled": false,
       "position": "freelancer",
       "job": "cameras",
       "roles": [
         "user"
-      ]
+      ],
+      "password": "samplePassword123"
     },
     {
       "id": "4",
@@ -46,12 +46,12 @@
       "lastname": "Taylor",
       "phonenumber": "555-0104",
       "email": "lisa@example.com",
-      "enabled": true,
       "position": "staff",
       "job": "producer",
       "roles": [
         "admin"
-      ]
+      ],
+      "password": "samplePassword123"
     },
     {
       "id": "5",
@@ -59,12 +59,12 @@
       "lastname": "Anderson",
       "phonenumber": "555-0105",
       "email": "sara@example.com",
-      "enabled": true,
       "position": "staff",
       "job": "assistant producer",
       "roles": [
         "user"
-      ]
+      ],
+      "password": "samplePassword123"
     },
     {
       "id": "6",
@@ -72,12 +72,12 @@
       "lastname": "Thomas",
       "phonenumber": "555-0106",
       "email": "dave@example.com",
-      "enabled": true,
       "position": "staff",
       "job": "toc",
       "roles": [
         "user"
-      ]
+      ],
+      "password": "samplePassword123"
     },
     {
       "id": "7",
@@ -85,12 +85,12 @@
       "lastname": "White",
       "phonenumber": "555-0107",
       "email": "nina@example.com",
-      "enabled": true,
       "position": "broadcaster",
       "job": "assistant director",
       "roles": [
         "user"
-      ]
+      ],
+      "password": "samplePassword123"
     },
     {
       "id": "8",
@@ -98,12 +98,12 @@
       "lastname": "Clark",
       "phonenumber": "555-0108",
       "email": "brian@example.com",
-      "enabled": true,
       "position": "freelancer",
       "job": "director",
       "roles": [
         "user"
-      ]
+      ],
+      "password": "samplePassword123"
     },
     {
       "id": "9",
@@ -111,12 +111,12 @@
       "lastname": "Moore",
       "phonenumber": "555-0109",
       "email": "maria@example.com",
-      "enabled": true,
       "position": "student",
       "job": "replay",
       "roles": [
         "user"
-      ]
+      ],
+      "password": "samplePassword123"
     },
     {
       "id": "10",
@@ -124,12 +124,12 @@
       "lastname": "Jackson",
       "phonenumber": "555-0110",
       "email": "kevin@example.com",
-      "enabled": true,
       "position": "freelancer",
       "job": "video operator",
       "roles": [
         "user"
-      ]
+      ],
+      "password": "samplePassword123"
     },
     {
       "id": "11",
@@ -137,12 +137,12 @@
       "lastname": "Martin",
       "phonenumber": "555-0111",
       "email": "olivia@example.com",
-      "enabled": true,
       "position": "student",
       "job": "technical director",
       "roles": [
         "user"
-      ]
+      ],
+      "password": "samplePassword123"
     },
     {
       "id": "12",
@@ -150,12 +150,12 @@
       "lastname": "Lee",
       "phonenumber": "555-0112",
       "email": "mark@example.com",
-      "enabled": true,
       "position": "staff",
       "job": "score bug operator",
       "roles": [
         "user"
-      ]
+      ],
+      "password": "samplePassword123"
     },
     {
       "id": "13",
@@ -163,12 +163,12 @@
       "lastname": "Walker",
       "phonenumber": "555-0113",
       "email": "zoe@example.com",
-      "enabled": true,
       "position": "broadcaster",
       "job": "graphics",
       "roles": [
         "user"
-      ]
+      ],
+      "password": "samplePassword123"
     },
     {
       "id": "14",
@@ -176,12 +176,12 @@
       "lastname": "Harris",
       "phonenumber": "555-0114",
       "email": "anna@example.com",
-      "enabled": true,
       "position": "freelancer",
       "job": "audio 1",
       "roles": [
         "user"
-      ]
+      ],
+      "password": "samplePassword123"
     },
     {
       "id": "15",
@@ -189,12 +189,12 @@
       "lastname": "Young",
       "phonenumber": "555-0115",
       "email": "leo@example.com",
-      "enabled": true,
       "position": "freelancer",
       "job": "audio 2",
       "roles": [
         "user"
-      ]
+      ],
+      "password": "samplePassword123"
     },
     {
       "id": "16",
@@ -202,12 +202,12 @@
       "lastname": "King",
       "phonenumber": "555-0116",
       "email": "jack@example.com",
-      "enabled": true,
       "position": "broadcaster",
       "job": "stage manager",
       "roles": [
         "user"
-      ]
+      ],
+      "password": "samplePassword123"
     },
     {
       "id": "17",
@@ -215,12 +215,12 @@
       "lastname": "Scott",
       "phonenumber": "555-0117",
       "email": "ruby@example.com",
-      "enabled": true,
       "position": "student",
       "job": "stats",
       "roles": [
         "user"
-      ]
+      ],
+      "password": "samplePassword123"
     },
     {
       "id": "18",
@@ -228,17 +228,17 @@
       "lastname": "Green",
       "phonenumber": "555-0118",
       "email": "mike@example.com",
-      "enabled": true,
       "position": "broadcaster",
       "job": "talent",
       "roles": [
         "user"
-      ]
+      ],
+      "password": "samplePassword123"
     }
   ],
   "schedules": [
     {
-      "id": 1,
+      "id": "1",
       "date": "2024-03-09",
       "startTime": "4:00 PM",
       "endTime": "6:00 PM",
@@ -278,6 +278,26 @@
         "Cameras",
         "Stats"
       ]
+    }
+  ],
+  "invites": [
+    {
+      "id": 1,
+      "email": "newuser1@example.com",
+      "sentDate": "2025-04-27T18:30:00Z",
+      "signupLink": "http://localhost:5173/signup"
+    },
+    {
+      "id": 2,
+      "email": "newuser2@example.com",
+      "sentDate": "2025-04-27T18:32:00Z",
+      "signupLink": "http://localhost:5173/signup"
+    },
+    {
+      "id": "3943",
+      "email": "bhartje0@gmail.com",
+      "sentDate": "2025-04-28T19:34:37.294Z",
+      "signupLink": "http://localhost:5173/signup"
     }
   ]
 }
