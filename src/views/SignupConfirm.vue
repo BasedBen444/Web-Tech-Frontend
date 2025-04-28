@@ -9,6 +9,7 @@
         <li><strong>Email:</strong> {{ form.email }}</li>
         <li><strong>Position:</strong> {{ form.position }}</li>
         <li><strong>Job:</strong> {{ form.job }}</li>
+        <li><strong>Password:</strong> {{ form.password }}</li>
       </ul>
   
       <div class="button-group">
@@ -40,17 +41,16 @@
       const newUser = {
         ...form,
         availability: "",
-        enabled: true,
         roles: "user"
       }
       await api.createUser(newUser)
   
-      success.value = true // ✅ Set success
+      success.value = true // Set success
       signupStore.resetForm()
   
       setTimeout(() => {
         router.push({ name: 'login' })
-      }, 1500) // ✅ Small delay so user sees the success message
+      }, 1500) // Small delay so user sees the success message
     } catch (err) {
       error.value = err.message
     }

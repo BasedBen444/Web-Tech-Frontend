@@ -3,8 +3,8 @@
         <h2>Login</h2>
         <form @submit.prevent="handleLogin" class="login-form">
             <div class="form-group">
-                <label for="username">Username:</label>
-                <input type="text" id="username" name="username" v-model="username" required placeholder="Enter your username"/>
+                <label for="username">Email:</label>
+                <input type="text" id="username" name="username" v-model="username" required placeholder="Enter your email"/>
             </div>
             <div class="form-group">
                 <label for="password">Password:</label>
@@ -19,7 +19,7 @@
 import { ref } from 'vue'
 import { getUserRole, isAuthenticated, login } from '@/apis/auth.js'
 import { useRouter, useRoute } from 'vue-router'
-import { createScheduleRoute, userRoute, viewScheduleRoute } from '@/router/dynamicRoutes'
+import { createScheduleRoute, inviteRoute, userRoute, viewScheduleRoute } from '@/router/dynamicRoutes'
 import { useNavStore } from '@/stores/NavStore.js'
 
 const username = ref('')
@@ -44,6 +44,7 @@ async function handleLogin () {
 
         if (userRole === 'admin' && !router.hasRoute('createSchedule')) {
             router.addRoute('mainLayout', createScheduleRoute)
+            router.addRoute('mainLayout', inviteRoute)
             updateNavRoutes()
         }
 

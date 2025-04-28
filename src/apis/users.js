@@ -60,4 +60,31 @@ const deleteUser = async (id) => {
     }
   }
 
-export default {findAll, findById, createUser, deleteUser}
+  const sendInvite = async (email) => {
+    try {
+      const inviteData = {
+        email: email,
+        sentDate: new Date().toISOString(),
+        signupLink: 'http://localhost:5173/signup' // 🔥 Static signup link
+      }
+  
+      const response = await fetch('http://localhost:3000/invites', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(inviteData)
+      })
+  
+      if (!response.ok) {
+        throw new Error(`Error sending invite: ${response.statusText}`)
+      }
+  
+      return await response.json()
+    } catch (error) {
+      console.error(error)
+      throw error
+    }
+  }
+
+export default {findAll, findById, createUser, deleteUser, sendInvite}
