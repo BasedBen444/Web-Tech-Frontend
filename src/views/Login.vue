@@ -36,7 +36,7 @@ async function handleLogin () {
 
         const userRole = getUserRole()
 
-        if (userRole === 'admin' && !router.hasRoute('users')) {
+        if ((userRole === 'admin' || userRole === 'user') && !router.hasRoute('users')) {
             router.addRoute('mainLayout', userRoute)
             updateNavRoutes()
         }

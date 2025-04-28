@@ -2,9 +2,12 @@
     <div class="user-profile-container">
          <div v-if="loading">Loading...</div>
          <div v-else-if="user">
-             <h1 class="user-name">{{ user.firstname }}</h1>
+             <h1 class="user-name">{{ user.firstname }} {{ user.lastname }}</h1>
              <div class="user-info">
-                 <p>This is the user info</p>
+                <p>Role: {{ user.position }}</p>
+                <p>Qualified Position: {{ user.job }}</p>
+                <p>Phone: {{ user.phonenumber }}</p>
+                <p>Email: {{ user.email }}</p>
              </div>
          </div>
          <div v-else>Failed to load user profile. Please try again later</div>

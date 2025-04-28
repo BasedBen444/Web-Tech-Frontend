@@ -1,6 +1,6 @@
 <template>
     <div class="user-profile-layout">
-        <aside class="user-profile-list">
+        <aside v-if="isAuth" class="user-profile-list">
             <UserList></UserList>
         </aside>
         <main class="user-content-with-sidebar">    
@@ -13,6 +13,10 @@
 
 <script setup>
 import UserList from '@/components/UserList.vue'
+import { isAuthenticated } from '@/apis/auth';
+import { computed } from 'vue';
+
+const isAuth = computed(() => isAuthenticated.value)
 </script>
 
 <style lang="scss" scoped>
