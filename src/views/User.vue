@@ -2,7 +2,7 @@
     <div class="user-profile-container">
          <div v-if="loading">Loading...</div>
          <div v-else-if="user">
-             <h1 class="user-name">{{ user.username }}</h1>
+             <h1 class="user-name">{{ user.firstname }}</h1>
              <div class="user-info">
                  <p>This is the user info</p>
              </div>

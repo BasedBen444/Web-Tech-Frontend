@@ -9,7 +9,7 @@
             v-for="userProfile in userProfiles"
             :key="userProfile.id"
             :to="{ name: 'user', params: { id: userProfile.id } }" class = "user-item">
-                {{ userProfile.username }}
+                {{ userProfile.firstname }}
             </router-link>
        </div>
     </div>

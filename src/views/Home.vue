@@ -20,7 +20,6 @@ import { isAuthenticated, logout } from '@/apis/auth'
 import { onBeforeRouteUpdate, useRouter } from 'vue-router'
 import { useNavStore } from '@/stores/NavStore'
 import { onMounted } from 'vue'
-import { signupRoute } from '@/router/dynamicRoutes'
 
 const router = useRouter()
 const { updateNavRoutes } = useNavStore()

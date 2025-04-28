@@ -6,7 +6,7 @@ export const userRoute = {
         requiresAuth: true,
         title: 'Users',
         isNavLink: true,
-        roles: ['admin'],
+        roles: ['admin', 'user'],
     },
     children: [
         {path: '', name: 'usersGreeting', component: () => import('@/views/UserProfilesGreeting.vue')},
@@ -16,11 +16,4 @@ export const userRoute = {
         meta: {requiresAuth: true},
         }
     ]
-}
-
-export const signupRoute = { 
-    path: '/signup', 
-    name:'signup', 
-    component: () => import('@/views/Signup.vue'), 
-    meta: {requiresAuth: false, title:'Sign Up', isNavLink: true}
 }
