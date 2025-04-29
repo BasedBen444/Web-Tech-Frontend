@@ -11,7 +11,7 @@
           :to="{ name: 'schedule', params: { id: schedule.id } }"
           class="schedule-item"
         >
-          {{ schedule.date }}
+          {{ schedule.name }}
         </router-link>
       </div>
     </div>
@@ -66,7 +66,7 @@
   }
   
   .schedule-item:hover {
-    background-color: #007bff;
+    background-color: purple;
     color: #fff;
     transform: translateY(-3px);
   }
