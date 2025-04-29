@@ -79,4 +79,63 @@ const createGame = async (scheduleId, gameData) => {
   }
 }
 
-export default { createSchedule, findAllSchedules, findScheduleById, createGame }
+const USERS_URL = 'http://localhost:3000/users'
+
+const assignCrewToGame = async (scheduleId, gameId, assignments) => {
+  try {
+    // Fetch all users
+    const usersRes = await fetch(USERS_URL)
+    const users = await usersRes.json()
+
+    // Get the schedule
+    const scheduleRes = await fetch(`${BASE_URL}/${scheduleId}`)
+    if (!scheduleRes.ok) throw new Error('Schedule not found')
+    const schedule = await scheduleRes.json()
+
+    // Find the game
+    const gameIndex = schedule.games.findIndex(g => g.id === gameId)
+    if (gameIndex === -1) throw new Error('Game not found')
+
+    const game = schedule.games[gameIndex]
+
+    // Validate each role assignment
+    for (const role in assignments) {
+      const userId = assignments[role]
+      const user = users.find(u => u.id === userId)
+
+      if (!user) throw new Error(`User ${userId} not found`)
+
+      // Fix: Compare job/role case-insensitively
+      if (user.job?.toLowerCase() !== role.toLowerCase()) {
+        throw new Error(`${user.firstname} does not match job: ${role}`)
+      }
+
+      const available = user.availability?.some(
+        a => a.gameId === gameId && a.available === true
+      )
+      if (!available) {
+        throw new Error(`${user.firstname} is not available for ${role}`)
+      }
+    }
+
+    // Save crew assignments
+    schedule.games[gameIndex].assignedCrew = assignments
+
+    const updateRes = await fetch(`${BASE_URL}/${scheduleId}`, {
+      method: 'PUT',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(schedule)
+    })
+
+    if (!updateRes.ok) throw new Error('Failed to save crew assignments')
+
+    return await updateRes.json()
+  } catch (error) {
+    console.error(error)
+    throw error
+  }
+}
+
+
+
+export default { createSchedule, findAllSchedules, findScheduleById, createGame, assignCrewToGame }
