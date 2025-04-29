@@ -41,6 +41,11 @@ const handleLogout = () => {
         router.removeRoute('invite')
         updateNavRoutes()
     }
+
+    if(router.hasRoute('submitAvailability')) {
+        router.removeRoute('submitAvailability')
+        updateNavRoutes()
+    }
     
     logout()
 }

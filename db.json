@@ -12,7 +12,19 @@
         "admin",
         "user"
       ],
-      "password": "samplePassword123"
+      "password": "samplePassword123",
+      "availability": [
+        {
+          "gameId": "game-3",
+          "available": false,
+          "comment": "Only available after 3 PM"
+        },
+        {
+          "gameId": "game-1745899390777",
+          "available": false,
+          "comment": "Available all day"
+        }
+      ]
     },
     {
       "id": "2",
@@ -25,7 +37,19 @@
       "roles": [
         "user"
       ],
-      "password": "samplePassword123"
+      "password": "samplePassword123",
+      "availability": [
+        {
+          "gameId": "game-2",
+          "available": true,
+          "comment": "Only available after 3 PM"
+        },
+        {
+          "gameId": "game-1745899390777",
+          "available": false,
+          "comment": "Unavailable due to conflict"
+        }
+      ]
     },
     {
       "id": "3",
@@ -38,7 +62,19 @@
       "roles": [
         "user"
       ],
-      "password": "samplePassword123"
+      "password": "samplePassword123",
+      "availability": [
+        {
+          "gameId": "game-1",
+          "available": true,
+          "comment": "example"
+        },
+        {
+          "gameId": "game-1745903462687",
+          "available": false,
+          "comment": "what"
+        }
+      ]
     },
     {
       "id": "4",
@@ -51,7 +87,8 @@
       "roles": [
         "admin"
       ],
-      "password": "samplePassword123"
+      "password": "samplePassword123",
+      "availability": []
     },
     {
       "id": "5",
@@ -64,7 +101,8 @@
       "roles": [
         "user"
       ],
-      "password": "samplePassword123"
+      "password": "samplePassword123",
+      "availability": []
     },
     {
       "id": "6",
@@ -77,7 +115,8 @@
       "roles": [
         "user"
       ],
-      "password": "samplePassword123"
+      "password": "samplePassword123",
+      "availability": []
     },
     {
       "id": "7",
@@ -90,7 +129,8 @@
       "roles": [
         "user"
       ],
-      "password": "samplePassword123"
+      "password": "samplePassword123",
+      "availability": []
     },
     {
       "id": "8",
@@ -103,7 +143,8 @@
       "roles": [
         "user"
       ],
-      "password": "samplePassword123"
+      "password": "samplePassword123",
+      "availability": []
     },
     {
       "id": "9",
@@ -116,7 +157,8 @@
       "roles": [
         "user"
       ],
-      "password": "samplePassword123"
+      "password": "samplePassword123",
+      "availability": []
     },
     {
       "id": "10",
@@ -129,7 +171,8 @@
       "roles": [
         "user"
       ],
-      "password": "samplePassword123"
+      "password": "samplePassword123",
+      "availability": []
     },
     {
       "id": "11",
@@ -142,7 +185,8 @@
       "roles": [
         "user"
       ],
-      "password": "samplePassword123"
+      "password": "samplePassword123",
+      "availability": []
     },
     {
       "id": "12",
@@ -155,7 +199,8 @@
       "roles": [
         "user"
       ],
-      "password": "samplePassword123"
+      "password": "samplePassword123",
+      "availability": []
     },
     {
       "id": "13",
@@ -168,7 +213,8 @@
       "roles": [
         "user"
       ],
-      "password": "samplePassword123"
+      "password": "samplePassword123",
+      "availability": []
     },
     {
       "id": "14",
@@ -181,7 +227,8 @@
       "roles": [
         "user"
       ],
-      "password": "samplePassword123"
+      "password": "samplePassword123",
+      "availability": []
     },
     {
       "id": "15",
@@ -194,7 +241,8 @@
       "roles": [
         "user"
       ],
-      "password": "samplePassword123"
+      "password": "samplePassword123",
+      "availability": []
     },
     {
       "id": "16",
@@ -207,7 +255,8 @@
       "roles": [
         "user"
       ],
-      "password": "samplePassword123"
+      "password": "samplePassword123",
+      "availability": []
     },
     {
       "id": "17",
@@ -220,7 +269,8 @@
       "roles": [
         "user"
       ],
-      "password": "samplePassword123"
+      "password": "samplePassword123",
+      "availability": []
     },
     {
       "id": "18",
@@ -233,7 +283,8 @@
       "roles": [
         "user"
       ],
-      "password": "samplePassword123"
+      "password": "samplePassword123",
+      "availability": []
     }
   ],
   "schedules": [
@@ -321,6 +372,23 @@
           "requiredCrewPositions": [
             "Producer",
             "Cameras",
+            "Stats"
+          ]
+        },
+        {
+          "id": "game-1745903462687",
+          "date": "2025-05-02",
+          "startTime": "10:00",
+          "endTime": "13:00",
+          "timezone": "CST",
+          "sport": "Badminton",
+          "teams": "TCU vs Purdue",
+          "network": "ESPN+",
+          "location": "Fort Worth, TX",
+          "notes": "asdwefwrgwar",
+          "requiredCrewPositions": [
+            "Producer",
+            "Camera",
             "Stats"
           ]
         }
