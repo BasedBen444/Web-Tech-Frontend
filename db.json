@@ -88,7 +88,23 @@
         "admin"
       ],
       "password": "samplePassword123",
-      "availability": []
+      "availability": [
+        {
+          "gameId": "game-1",
+          "available": true,
+          "comment": "Available all day"
+        },
+        {
+          "gameId": "game-2",
+          "available": false,
+          "comment": "Unavailable due to conflict"
+        },
+        {
+          "gameId": "game-1745893348589",
+          "available": true,
+          "comment": "Available all day"
+        }
+      ]
     },
     {
       "id": "5",
@@ -270,7 +286,13 @@
         "user"
       ],
       "password": "samplePassword123",
-      "availability": []
+      "availability": [
+        {
+          "gameId": "game-1745893348589",
+          "available": true,
+          "comment": "Available all day"
+        }
+      ]
     },
     {
       "id": "18",
@@ -315,7 +337,8 @@
             "Stats",
             "Stage Manager",
             "Talent"
-          ]
+          ],
+          "assignedCrew": {}
         },
         {
           "id": "game-2",
@@ -334,7 +357,8 @@
             "Cameras",
             "Audio 1",
             "Replay"
-          ]
+          ],
+          "assignedCrew": {}
         },
         {
           "id": "game-1745893348589",
@@ -350,7 +374,11 @@
           "requiredCrewPositions": [
             "Producer",
             "Stats"
-          ]
+          ],
+          "assignedCrew": {
+            "Producer": "4",
+            "Stats": "17"
+          }
         }
       ]
     },
@@ -373,24 +401,8 @@
             "Producer",
             "Cameras",
             "Stats"
-          ]
-        },
-        {
-          "id": "game-1745903462687",
-          "date": "2025-05-02",
-          "startTime": "10:00",
-          "endTime": "13:00",
-          "timezone": "CST",
-          "sport": "Badminton",
-          "teams": "TCU vs Purdue",
-          "network": "ESPN+",
-          "location": "Fort Worth, TX",
-          "notes": "asdwefwrgwar",
-          "requiredCrewPositions": [
-            "Producer",
-            "Camera",
-            "Stats"
-          ]
+          ],
+          "assignedCrew": {}
         }
       ]
     },
@@ -412,7 +424,8 @@
           "requiredCrewPositions": [
             "Producer",
             "Cameras"
-          ]
+          ],
+          "assignedCrew": {}
         },
         {
           "id": "game-1745899390777",
@@ -428,7 +441,8 @@
           "requiredCrewPositions": [
             "Producer",
             "Cameras"
-          ]
+          ],
+          "assignedCrew": {}
         },
         {
           "id": "game-1745899866843",
@@ -445,7 +459,8 @@
             "Producer",
             "Stats",
             "Cameras"
-          ]
+          ],
+          "assignedCrew": {}
         }
       ]
     }

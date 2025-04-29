@@ -89,3 +89,16 @@ export const submitAvailabilityRoute = {
       roles: ['user'],
   },
 }
+
+export const scheduleCrewRoute = {
+  path: '/schedule-crew',
+  name: 'scheduleCrew',
+  isNavLink: true,
+  component: () => import('@/views/ScheduleCrew.vue'),
+  meta:{
+      requiresAuth: true,
+      title: 'Schedule Crew',
+      isNavLink: true,
+      roles: ['admin'],
+  },
+}
