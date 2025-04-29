@@ -47,4 +47,36 @@ const findScheduleById = async (id) => {
     }
 }
 
-export default {createSchedule, findAllSchedules, findScheduleById}
+const createGame = async (scheduleId, gameData) => {
+  try {
+    // Get the existing schedule
+    const response = await fetch(`${BASE_URL}/${scheduleId}`)
+    if (!response.ok) {
+      throw new Error(`Error fetching schedule: ${response.statusText}`)
+    }
+    const schedule = await response.json()
+
+    // Add new game to existing games
+    const updatedGames = [...schedule.games, gameData]
+
+    // PATCH the updated games array
+    const patchResponse = await fetch(`${BASE_URL}/${scheduleId}`, {
+      method: 'PATCH',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ games: updatedGames })
+    })
+
+    if (!patchResponse.ok) {
+      throw new Error(`Error adding game: ${patchResponse.statusText}`)
+    }
+
+    return await patchResponse.json()
+  } catch (error) {
+    console.error(error)
+    throw error
+  }
+}
+
+export default { createSchedule, findAllSchedules, findScheduleById, createGame }
