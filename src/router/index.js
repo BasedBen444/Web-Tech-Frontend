@@ -11,6 +11,7 @@ const router = createRouter({
         { path: '/login', name: 'login', component: () => import('@/views/Login.vue'), meta: {requiresAuth: false} },
         { path: '/signup', name: 'signup', component: () => import('@/views/Signup.vue'), meta: {requiresAuth: false} },
         { path: '/signup/confirm', name: 'signup-confirm', component: () => import('@/views/SignupConfirm.vue'), meta: {requiresAuth: false} },
+        { path: '/creategame/:scheduleId', name: 'creategame', component: () => import('@/views/CreateGame.vue'), meta: {requiresAuth: true} },
         { path: '/:pathMatch(.*)*', name: 'not-found', component: () => import('@/views/NotFound.vue'), meta: {requiresAuth: false} },
     ],
 })

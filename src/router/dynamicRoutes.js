@@ -34,21 +34,35 @@ export const viewScheduleRoute = {
     path: '/schedules',
     name: 'schedules',
     component: () => import('@/views/Schedules.vue'),
-    meta:{
-        requiresAuth: true,
-        title: 'Schedules',
-        isNavLink: true,
-        roles: ['admin', 'user'],
+    meta: {
+      requiresAuth: true,
+      title: 'Schedules',
+      isNavLink: true,
+      roles: ['admin', 'user'],
     },
     children: [
-        {path: '', name: 'schedulesGreeting', component: () => import('@/views/SchedulesGreeting.vue')},
-        {path:'/schedules/:id(\\d+)', name:'schedule', components: {
-            default: () => import('@/views/Schedule.vue'),
-        }, 
-        meta: {requiresAuth: true},
-        }
+      {
+        path: '',
+        name: 'schedulesGreeting',
+        component: () => import('@/views/SchedulesGreeting.vue')
+      },
+      {
+        path: ':id(\\d+)',
+        name: 'schedule',
+        component: () => import('@/views/Schedule.vue'),
+        meta: { requiresAuth: true },
+        children: [
+          {
+            path: 'games/:gameId',
+            name: 'game',
+            component: () => import('@/views/Game.vue'),
+            meta: { requiresAuth: true }
+          }
+        ]
+      }
     ]
-}
+  }
+  
 
 export const inviteRoute = {
     path: '/invite',

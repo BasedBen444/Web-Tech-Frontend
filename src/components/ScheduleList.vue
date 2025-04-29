@@ -11,7 +11,7 @@
           :to="{ name: 'schedule', params: { id: schedule.id } }"
           class="schedule-item"
         >
-          {{ schedule.teams }} - {{ schedule.date }}
+          {{ schedule.date }}
         </router-link>
       </div>
     </div>

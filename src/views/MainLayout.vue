@@ -11,7 +11,7 @@
 import Navigation from '@/components/Navigation.vue'
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
 .main-layout {
   display: flex;
   flex-direction: column;
