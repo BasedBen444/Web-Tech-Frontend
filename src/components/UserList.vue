@@ -5,8 +5,8 @@
       <!-- Admin-only filters -->
       <div v-if="isAdminUser" class="filters">
         <input v-model="filters.name" type="text" placeholder="Filter by First Name" />
-        <input v-model="filters.job" type="text" placeholder="Filter by Qualified Position" />
-        <input v-model="filters.position" type="text" placeholder="Filter by Role" />
+        <input v-model="filters.job" type="text" placeholder="Filter by Role" />
+        <input v-model="filters.position" type="text" placeholder="Filter by Qualified Position" />
       </div>
   
       <div v-if="loading">Loading...</div>
@@ -109,7 +109,7 @@
   }
   
   .user-item:hover {
-    background-color: #007bff;
+    background-color: purple;
     color: white;
   }
   </style>

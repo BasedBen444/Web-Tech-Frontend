@@ -312,7 +312,7 @@
   "schedules": [
     {
       "id": "1",
-      "date": "2024-03-09",
+      "name": "Schedule-1",
       "games": [
         {
           "id": "game-1",
@@ -384,7 +384,7 @@
     },
     {
       "id": "2",
-      "date": "2024-05-02",
+      "name": "Schedule-2",
       "games": [
         {
           "id": "game-3",
@@ -408,7 +408,7 @@
     },
     {
       "id": "18bd",
-      "date": "2025-05-10",
+      "name": "Schedule-3",
       "games": [
         {
           "id": "game-1745894728221",
@@ -463,6 +463,30 @@
           "assignedCrew": {}
         }
       ]
+    },
+    {
+      "id": "dc4c",
+      "name": "schedule4",
+      "games": [
+        {
+          "id": "game-1745962348544",
+          "date": "2025-08-22",
+          "startTime": "12:00",
+          "endTime": "16:00",
+          "timezone": "CST",
+          "sport": "Football",
+          "teams": "TCU vs Clemson",
+          "network": "ESPN+",
+          "location": "Fort Worth, TX",
+          "notes": "Example comment",
+          "requiredCrewPositions": [
+            "Producer",
+            "Cameras",
+            "Stats",
+            "Director"
+          ]
+        }
+      ]
     }
   ],
   "invites": [
@@ -476,6 +500,12 @@
       "id": "2",
       "email": "newuser2@example.com",
       "sentDate": "2025-04-27T18:32:00Z",
+      "signupLink": "http://localhost:5173/signup"
+    },
+    {
+      "id": "7d18",
+      "email": "emily@example.com",
+      "sentDate": "2025-04-29T21:04:52.227Z",
       "signupLink": "http://localhost:5173/signup"
     }
   ]

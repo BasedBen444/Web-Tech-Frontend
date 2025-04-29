@@ -4,10 +4,23 @@
          <div v-else-if="user">
              <h1 class="user-name">{{ user.firstname }} {{ user.lastname }}</h1>
              <div class="user-info">
-                <p>Role: {{ user.position }}</p>
-                <p>Qualified Position: {{ user.job }}</p>
+                <p>Qualified Position: {{ user.position }}</p>
+                <p>Role: {{ user.job }}</p>
                 <p>Phone: {{ user.phonenumber }}</p>
                 <p>Email: {{ user.email }}</p>
+                <div>
+                    <p><strong>Availability:</strong></p>
+                    <div v-if="user.availability && user.availability.length > 0">
+                        <p v-for="(entry, index) in user.availability" :key="index">
+                            Game Id: {{ entry.gameId }}
+                            <br>
+                            Status: <span v-if="entry.available">Available</span><span v-else>Unavailable</span>
+                            <br>
+                            Comment: "{{ entry.comment }}"
+                        </p>
+                    </div>
+                    <p v-else>No availability listed</p>
+                </div>
                 <div v-if="isAdminUser" class="button-group">
                     <button @click="confirmDelete">Delete Crew Member</button>
                 </div>

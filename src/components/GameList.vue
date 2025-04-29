@@ -22,7 +22,7 @@
           :to="{ name: 'game', params: { gameId: game.id } }"
           class="game-button"
         >
-          {{ game.date }} - {{ game.teams }}
+          {{ game.date }} - {{ game.teams }} - {{ game.id }}
         </router-link>
       </li>
     </ul>

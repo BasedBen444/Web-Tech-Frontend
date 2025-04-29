@@ -4,8 +4,8 @@
   
       <form @submit.prevent="submitSchedule">
         <label>
-          Schedule Date:
-          <input v-model="date" type="date" required />
+          Schedule Name:
+          <input v-model="name" required />
         </label>
   
         <div class="button-group">
@@ -22,7 +22,7 @@
   import { ref } from 'vue'
   import api from '@/apis/scheduling'
   
-  const date = ref('')
+  const name = ref('')
   const success = ref(false)
   const error = ref(false)
   
@@ -32,11 +32,11 @@
   
     try {
       await api.createSchedule({
-        date: date.value,
+        name: name.value,
         games: [] // Empty games array initially
       })
       success.value = true
-      date.value = ''
+      name.value = ''
     } catch (err) {
       error.value = true
     }
@@ -81,7 +81,7 @@
   
   button {
     padding: 0.75rem 2rem;
-    background-color: #007bff;
+    background-color: purple;
     color: white;
     border: none;
     border-radius: 8px;
@@ -91,7 +91,8 @@
   }
   
   button:hover {
-    background-color: #0056b3;
+    background-color: darkviolet;
+    transition: background-color 0.3s ease;
   }
   
   .success-msg {
