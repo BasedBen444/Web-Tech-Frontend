@@ -19,7 +19,7 @@
 import { ref } from 'vue'
 import { getUserRole, isAuthenticated, login } from '@/apis/auth.js'
 import { useRouter, useRoute } from 'vue-router'
-import { createScheduleRoute, inviteRoute, userRoute, viewScheduleRoute } from '@/router/dynamicRoutes'
+import { createScheduleRoute, inviteRoute, submitAvailabilityRoute, userRoute, viewScheduleRoute } from '@/router/dynamicRoutes'
 import { useNavStore } from '@/stores/NavStore.js'
 
 const username = ref('')
@@ -45,6 +45,11 @@ async function handleLogin () {
         if (userRole === 'admin' && !router.hasRoute('createSchedule')) {
             router.addRoute('mainLayout', createScheduleRoute)
             router.addRoute('mainLayout', inviteRoute)
+            updateNavRoutes()
+        }
+
+        if (userRole === userRole && !router.hasRoute('viewSchedule')) {
+            router.addRoute('mainLayout', submitAvailabilityRoute)
             updateNavRoutes()
         }
 

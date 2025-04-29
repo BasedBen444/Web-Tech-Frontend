@@ -76,3 +76,16 @@ export const inviteRoute = {
         roles: ['admin'],
     },
 }
+
+export const submitAvailabilityRoute = {
+  path: '/submit-availability',
+  name: 'submitAvailability',
+  isNavLink: true,
+  component: () => import('@/views/SubmitAvailability.vue'),
+  meta:{
+      requiresAuth: true,
+      title: 'Submit Availability',
+      isNavLink: true,
+      roles: ['user'],
+  },
+}
