@@ -96,8 +96,6 @@ const assignCrewToGame = async (scheduleId, gameId, assignments) => {
     const gameIndex = schedule.games.findIndex(g => g.id === gameId)
     if (gameIndex === -1) throw new Error('Game not found')
 
-    const game = schedule.games[gameIndex]
-
     // Validate each role assignment
     for (const role in assignments) {
       const userId = assignments[role]

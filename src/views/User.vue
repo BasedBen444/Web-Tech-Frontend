@@ -8,7 +8,7 @@
                 <p>Role: {{ user.job }}</p>
                 <p>Phone: {{ user.phonenumber }}</p>
                 <p>Email: {{ user.email }}</p>
-                <div>
+                <div v-if="isAdminUser">
                     <p><strong>Availability:</strong></p>
                     <div v-if="user.availability && user.availability.length > 0">
                         <p v-for="(entry, index) in user.availability" :key="index">
